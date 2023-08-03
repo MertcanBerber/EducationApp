@@ -1,0 +1,55 @@
+﻿@using Binte.WebApp.ViewModels.FontendView;
+@model List<PopularCoursesViewModel>
+
+<div class=" flat-row popular-course">
+    <div class="container">
+        <div class="flat-title-section">
+            <h1 class="title">POPULAR COURSES</h1>
+        </div>
+
+        <div class="flat-course-grid button-right">
+            @foreach (var item in Model)
+            {
+                <div class="flat-course">
+                    <div class="featured-post">
+                        <div class="overlay">
+                            <div class="link"></div>
+                        </div>
+
+                        <a href="courses-single.html"><img src="/Frontend/images/index/course1.jpg" alt="Course1"></a>
+                    </div><!-- /.featured-post -->
+
+                    <div class="course-content">
+                        <h4><a href="/Home/CourseDetail/@item.Id">@item.Name</a> </h4>
+
+                        <div class="price">@item.Price</div>
+
+                        <ul class="course-meta review">
+                         <li>@item.TeacherName</li>
+                        </ul>
+
+                        <p>@item.Description</p>
+
+                        <ul class="course-meta desc">
+                            <li>
+                                <h6>@item.Hour + "Saat"</h6>
+                                <span> Course</span>
+                            </li>
+
+                            <li>
+                                <h6>@item.Capacity</h6>
+                                <span> Class Size</span>
+                            </li>
+
+                            <li>
+                                <h6><span class="course-time">7:00 - 10:00</span></h6>
+                                <span> Class Duration</span>
+                            </li>
+                        </ul>
+                    </div><!-- /.course-content -->
+                </div>
+            }
+            
+        </div><!-- /.flat-course grid -->
+    </div>
+</div>

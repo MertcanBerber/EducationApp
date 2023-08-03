@@ -1,0 +1,169 @@
+﻿@using Binte.Data.Entities.Account;
+@model List<EducationGroupListViewModel>
+@{
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+    var userlist = ViewBag.OgrenciListesi as List<BinteUser>;
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Eğitim Grupları</h3>
+                <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <a class="btn btn-primary" href="/Education/AddEducationGroups">Eğitim Grubu Ekle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Grup Adı</th>
+                            <th>Eğitim Adı</th>
+                            <th>Eğitici Adı</th>
+                            <th>Kapasite</th>
+                            <th>Baslangıç T.</th>
+                            <th>Toplam Süre</th>
+                            <th>Kayıtlı Ö.S</th>
+                            <th>Eğitim Tipi</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>@item.EducationName</td>
+                                <td>@item.TeacherName</td>
+                                <td>@item.MaxCapacity</td>
+                                <td>@item.StartDate.ToString("dd/MM/YYYY")</td>
+                                <td>@(item.TotalHour + " " + "saat")</td>
+                                <td>@item.RegisteredStudentCount</td>
+                                <td>@(item.IsOnline ? "online" : "Sinif Ici")</td>
+                                <td>
+                                    <a class="btn btn-success" href="/Education/UpdateEducationGroup/@item.Id">Güncelle</a>
+                                    <button onclick="savegroupid(@item.Id)" type="button" class="btn btn-default" data-toggle="modal" data-target="#ogrenci-ekle">
+                                        Öğrenci Ekle
+                                    </button>
+                                    <button id="btnOpenList" onclick="savegroupid(@item.Id)" type="button" class="btn btn-default" data-toggle="modal" data-target="#ogrenci-listesi">
+                                        Öğrenci Listesi
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ogrenci-ekle">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Gruba Ogrenci Ata</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <select id="studentList" class="form-control select2" style="width: 100%;">
+                    @foreach (var item in userlist)
+                    {
+                        <option value="@item.Id">@(item.Name + " " + item.Surname)</option>
+                    }
+                </select>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnSave">Ekle</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ogrenci-listesi">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Ogrenci Listesi</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>Adi</th>
+                            <th>Soyadi</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" > Yeni Ekle</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        var groupid = 0;
+        function savegroupid(id) {
+            groupid = id;
+        }
+        $(function () {
+            $("#btnSave").click(function () {
+                var studentid = $("#studentList").val();
+                $.post("/Education/AddStudentForEducationGroup", { eid: groupid, sid: studentid }, function (data) {
+                    if(data.status=="true")
+                    {
+                        window.location.href = window.location.href;
+                    }
+                    else{
+                        alert(data.message);
+                    }
+                });
+            });
+            $("#btnOpenList").click(function(){
+                $.get("/Education/GetStudentsForEducationGroup", { groupId: groupid }, function (data) {
+                    if (data.status == true) {
+                        var tableContent=$("#tableBody");
+                        var datacount=data.datalist.length;
+                        for (var i = 0; i < datacount; i++){
+                            tableContent.append("<tr>");
+                            tableContent.append("<td>"+data.datalist[i].name+"</td>");
+                            tableContent.append("<td>" + data.datalist[i].surname + "</td>");
+                            tableContent.append("<td>" + data.datalist[i].email + "</td>");
+                            tableContent.append("<td>" + data.datalist[i].phonenumber + "</td>");
+                            tableContent.append("</tr>");
+                        }                
+                    }
+                    else {
+                        alert(data.message);
+                    }
+                });
+            });
+        });
+
+    </script>
+
+}
+
+
+
+
+

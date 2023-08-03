@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+@model EducationEditViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">Eğitimi Düzenle</h3>
+            </div>
+            <form class="form-horizontal" action="/Education/UpdateEducation" method="post" enctype="multipart/form-data">
+                <div class="card-body">
+                    @Html.HiddenFor(p=>p.Id)
+                    @Html.HiddenFor(p=>p.Image)
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.CategoryId)
+                        <div class="col-sm-10">
+                            @Html.BSDropDown(p=>p.CategoryId,Model.Categories)
+                            @Html.ValidationMessageFor(p=>p.CategoryId)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.DependentSubjectId)
+                        <div class="col-sm-10">
+                            @Html.BSDropDown(p=>p.DependentSubjectId,Model.Educations)
+                            @Html.ValidationMessageFor(p=>p.DependentSubjectId)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.Name)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.Name)
+                            @Html.ValidationMessageFor(p=>p.Name)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.Description)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.Description)
+                            @Html.ValidationMessageFor(p=>p.Description)
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="image1" id="image1">
+                            <label class="custom-file-label" for="image1">Dosya seç</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-info float-right">Kaydet</button>
+                    <button href="/Education/Educations" class="btn btn-default float-right">Vazgeç</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

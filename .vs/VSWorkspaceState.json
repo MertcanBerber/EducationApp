@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Binte.WebApp",
+    "\\Binte.WebApp\\Controllers",
+    "\\Binte.WebApp\\Views",
+    "\\Binte.WebApp\\Views\\Account",
+    "\\Binte.WebApp\\Views\\Education",
+    "\\Binte.WebApp\\Views\\Shared",
+    "\\Binte.WebApp\\Views\\Shared\\Components",
+    "\\Binte.WebApp\\Views\\Shared\\Components\\PanelUserInfo",
+    "\\Binte.WebApp\\Views\\Shared\\Components\\PopularCourses"
+  ],
+  "SelectedNode": "\\Binte.sln",
+  "PreviewInSolutionExplorer": false
+}

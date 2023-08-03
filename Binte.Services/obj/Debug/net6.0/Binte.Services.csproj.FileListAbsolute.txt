@@ -1,0 +1,49 @@
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Services.deps.json
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Services.dll
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Services.pdb
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Core.dll
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Core.pdb
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.AssemblyReference.cache
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.AssemblyInfoInputs.cache
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.AssemblyInfo.cs
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.CoreCompileInputs.cache
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.CopyComplete
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.dll
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\refint\Binte.Services.dll
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.pdb
+C:\Users\BOĞAÇ EROĞLU\source\repos\Binte\Binte.Services\obj\Debug\net6.0\ref\Binte.Services.dll
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Services.deps.json
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Services.dll
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Services.pdb
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Core.dll
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Data.dll
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Core.pdb
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\bin\Debug\net6.0\Binte.Data.pdb
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.AssemblyReference.cache
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.AssemblyInfoInputs.cache
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.AssemblyInfo.cs
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.CoreCompileInputs.cache
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.CopyComplete
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.dll
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\refint\Binte.Services.dll
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\Binte.Services.pdb
+C:\Users\Sumeyra\Desktop\Bogac-Masaustu\repos\Binte\Binte.Services\obj\Debug\net6.0\ref\Binte.Services.dll
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\bin\Debug\net6.0\Binte.Services.deps.json
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\bin\Debug\net6.0\Binte.Services.dll
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\bin\Debug\net6.0\Binte.Services.pdb
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\bin\Debug\net6.0\Binte.Core.dll
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\bin\Debug\net6.0\Binte.Data.dll
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\bin\Debug\net6.0\Binte.Core.pdb
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\bin\Debug\net6.0\Binte.Data.pdb
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.AssemblyReference.cache
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\Binte.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\Binte.Services.AssemblyInfoInputs.cache
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\Binte.Services.AssemblyInfo.cs
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.CoreCompileInputs.cache
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\Binte.Services.csproj.CopyComplete
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\Binte.Services.dll
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\refint\Binte.Services.dll
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\Binte.Services.pdb
+C:\Users\mert berber\Desktop\Mert berber Projeler\asp.net proje\Binte.Services\obj\Debug\net6.0\ref\Binte.Services.dll

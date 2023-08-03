@@ -1,0 +1,64 @@
+﻿@model List<UserListViewModel>
+@{
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Kullanıcı Listesi</h3>
+                <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <a class="btn btn-primary" href="/Account/AddUser">Kullanıcı Ekle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Kullanıcı Adı</th>
+                            <th>Adı Soyadı</th>
+                            <th>Email</th>
+                            <th>Doğum Tarihi</th>
+                            <th>Roller</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Username</td>
+                                <td>@item.NameSurname</td>
+                                <td>@item.EmailAddress</td>
+                                <td>@item.Birthdate</td>
+                                <td>@item.Role</td>
+                                <td>
+                                    <a class="btn btn-success" href="/Account/UpdateUser/@item.Id">Güncelle</a>
+                                    <button data-val="@item.Id" class="deletebutton btn btn-danger" type="button">Sil</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".deletebutton").click(function () {
+        alert("Kayit Silinecektir")
+        $.post("/Account/DeleteUser", {
+            id: $(this).attr("data-val")
+        }, function (response) {
+            if (response.status == true) {
+                window.location.href = "/Account/Users";
+            }
+        })
+    }
+    )
+</script>
+

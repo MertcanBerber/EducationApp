@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+@model EducationCategoryEditViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">Eğitim Kategorisi Güncelle</h3>
+            </div>
+            <form class="form-horizontal" action="/Education/UpdateEduCategory" method="post" enctype="multipart/form-data">
+                <div class="card-body">
+                    @Html.HiddenFor(p=>p.Id)
+                    @Html.HiddenFor(p=>p.Image)
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.Title)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.Title)
+                            @Html.ValidationMessageFor(p=>p.Title)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.Description)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.Description)
+                            @Html.ValidationMessageFor(p=>p.Description)
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        @Html.BSDisplayFor(p=>p.Image)
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="newimage" id="newimage">
+                            <label class="custom-file-label" for="newimage">Dosya seç</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-info float-right">Kaydet</button>
+                    <button href="/Education/EducationCategories" class="btn btn-default float-right">Vazgeç</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

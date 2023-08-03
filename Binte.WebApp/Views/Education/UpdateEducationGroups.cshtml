@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+@model EducationGroupEditViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">Eğitim Grubunu Düzenle</h3>
+            </div>
+            <form class="form-horizontal" action="/Education/UpdateEducationGroup/@Model.Id" method="post" enctype="multipart/form-data">
+                <div class="card-body">
+                    @Html.HiddenFor(p=>p.Id)
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.Name)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.Name)
+                            @Html.ValidationMessageFor(p=>p.Name)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.EducationId)
+                        <div class="col-sm-10">
+                            @Html.BSDropDown(p=>p.EducationId,Model.Educations)
+                            @Html.ValidationMessageFor(p=>p.EducationId)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.TeacherId)
+                        <div class="col-sm-10">
+                            @Html.BSDropDown(p=>p.TeacherId,Model.Teachers)
+                            @Html.ValidationMessageFor(p=>p.TeacherId)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.IsOnline)
+                        <div class="col-sm-10">
+                            @Html.CheckBoxFor(p=>p.IsOnline)
+                            @Html.ValidationMessageFor(p=>p.IsOnline)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.MaxCapacity)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.MaxCapacity)
+                            @Html.ValidationMessageFor(p=>p.MaxCapacity)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.StartDate)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.StartDate)
+                            @Html.ValidationMessageFor(p=>p.StartDate)
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.TotalHour)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.TotalHour)
+                            @Html.ValidationMessageFor(p=>p.TotalHour)
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    @Html.ValidationMessage("General")
+                    <button type="submit" class="btn btn-info float-right">Kaydet</button>
+                    <button href="/Education/EducationGroups" class="btn btn-default float-right">Vazgeç</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

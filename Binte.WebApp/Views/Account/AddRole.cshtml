@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+@model RoleListViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">Rol Ekle</h3>
+            </div>
+            <form class="form-horizontal" action="/Account/AddRole" method="post">
+                <div class="card-body">
+                    <div class="form-group row">
+                        @Html.BSDisplayFor(p=>p.Name)
+                        <div class="col-sm-10">
+                            @Html.BSTextBox(p=>p.Name)
+                            @Html.ValidationMessageFor(p=>p.Name)
+                        </div>
+                    </div>                    
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-info float-right">Kaydet</button>
+                    <button href="/Account/Roles" class="btn btn-default float-right">Vazgeç</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
